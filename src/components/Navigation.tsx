@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { motion } from "framer-motion";
-import { Heart, User, Code, Gamepad2, MessageCircle } from "lucide-react";
+import { Heart, Gamepad2 } from "lucide-react";
 
 const navItems = [
   { href: "/", label: "Home", icon: Heart },

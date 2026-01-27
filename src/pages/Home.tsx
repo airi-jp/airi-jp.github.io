@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { EasterEgg } from "@/components/EasterEgg";
 import { Badge } from "@/components/ui/badge";
-import { Box, MapPin, Calendar, Heart, Mail, Github, Twitter } from "lucide-react";
+import { Box, MapPin, Calendar, Heart, Mail, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {

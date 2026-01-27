@@ -3,8 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { EasterEgg } from "@/components/EasterEgg";
 import { 
   Code2, Gamepad2, Globe2, 
-  Terminal, Monitor, Database,
-  GraduationCap, Box
+  Monitor, Box
 } from "lucide-react";
 import { SiPython, SiLua, SiJavascript, SiTypescript, SiCplusplus } from "react-icons/si";
 
