@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 export default defineConfig({
+    base: '/awi-jp.github.io/',
     plugins: [react()],
     resolve: {
         alias: {
