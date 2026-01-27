@@ -4,10 +4,12 @@ import { EasterEgg } from "@/components/EasterEgg";
 import { Badge } from "@/components/ui/badge";
 import { Box, MapPin, Calendar, Heart, Mail, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export default function Home() {
   return (
-    <div className="min-h-screen pb-24 flex flex-col items-center justify-center p-4">
+    <TooltipProvider>
+      <div className="min-h-screen pb-24 flex flex-col items-center justify-center p-4">
       <Navigation />
       <EasterEgg />
 
@@ -81,17 +83,24 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="rounded-2xl gap-2 hover-elevate"
-              asChild
-            >
-              <a href="mailto:me@airijp.im.a.dev">
-                <Mail className="w-5 h-5" />
-                Email Me
-              </a>
-            </Button>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="rounded-2xl gap-2 hover-elevate"
+                  asChild
+                >
+                  <a href="mailto:me@airijp.is-a.dev">
+                    <Mail className="w-5 h-5" />
+                    Email Me
+                  </a>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>me@airijp.is-a.dev</p>
+              </TooltipContent>
+            </Tooltip>
             <Button 
               variant="outline" 
               size="icon" 
@@ -106,5 +115,6 @@ export default function Home() {
         </div>
       </motion.div>
     </div>
+    </TooltipProvider>
   );
 }
