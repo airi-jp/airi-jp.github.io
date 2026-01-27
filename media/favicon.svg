@@ -1,9 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" style="background: transparent;">
   <!-- Background -->
-  <rect width="200" height="200" fill="white"/>
+  
   
   <!-- Main box container with rounded corners -->
-  <rect x="30" y="30" width="140" height="140" rx="30" fill="white" stroke="#e879f9" stroke-width="8"/>
+  
   
   <!-- Box icon inside -->
   <g transform="translate(100, 100)">
