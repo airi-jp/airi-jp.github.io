@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Pastel Pink Theme */
+  --background: 330 100% 98%;    /* Very light pink */
+  --foreground: 330 20% 30%;     /* Dark pink-grey for text */
+  
+  --primary: 330 80% 70%;        /* Soft pink */
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 260 80% 92%;      /* Soft purple */
+  --secondary-foreground: 260 30% 40%;
+  
+  --muted: 330 30% 94%;
+  --muted-foreground: 330 10% 50%;
+  
+  --accent: 190 70% 85%;         /* Soft cyan/blue */
+  --accent-foreground: 190 30% 30%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 330 30% 90%;
+  --input: 330 30% 90%;
+  --ring: 330 80% 70%;
+  
+  --radius: 1.5rem; /* Very rounded corners for cutesy look */
+  
+  --font-display: 'Fredoka', sans-serif;
+  --font-body: 'Quicksand', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 999px;
+  border: 2px solid hsl(var(--background));
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.8);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+    background-image: 
+      radial-gradient(at 10% 10%, hsl(330 80% 90% / 0.4) 0px, transparent 50%),
+      radial-gradient(at 90% 10%, hsl(260 80% 90% / 0.4) 0px, transparent 50%),
+      radial-gradient(at 50% 90%, hsl(190 70% 90% / 0.4) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight text-foreground/90;
+  }
+}
+
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+  }
+  
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-md border border-white/50 shadow-lg;
+  }
+
+  .hover-bounce {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .hover-bounce:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
